@@ -101,8 +101,8 @@ hi def link CurlyError Error
 hi def link SquareError Error
 hi def link CurlyError2 Error
 hi def link SquareError2 Error
-hi def link QuoteString IokeString
-hi def link SquareString IokeString
+hi def link QuoteString String
+hi def link SquareString String
 hi def link hashBang Comment
 hi def link Comment SemicolonComment
 hi def link QQ PreProc
