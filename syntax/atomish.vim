@@ -80,7 +80,7 @@ syn match LiteralStringRegexEscapeSlash display "\(\\\\\|\\\/\)" contained
 syn region LiteralStringRegexSquare start=/#r\[/ skip=/\\\]/ end=/]/ contains=LiteralStringRegexEscapeSquare
 syn match LiteralStringRegexEscapeSquare display "\(\\\\\|\\]\)" contained
 
-syn match AtomishNumber display "[-+]?[\d]\+\([.][\d]\+\)?"
+syn match AtomishNumber display "\(\<[-+]\=\d\+\.\d*\|\<\d\+\.\d*\|\<\d\+\|\<[-+]\d\+\)"
 
 syn match LiteralStringSymbol display "\([a-zA-Z0-9_!?]\)\@<!:[a-zA-Z0-9_!:?]\+"
 syn match LiteralStringKeyword display "[a-zA-Z0-9_!:?]\+:\([a-zA-Z0-9_!?]\)\@!"
