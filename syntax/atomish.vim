@@ -124,6 +124,11 @@ hi def link hashBang Comment
 hi def link Comment SemicolonComment
 hi def link QQ PreProc
 
+hi def link LiteralStringEscape SpecialChar
+hi def link AtomishCommonMessage Statement
+hi def link AtomishCommonToplevel Identifier
+hi def link AtomishCommonObject Identifier
+
 if &bg == "dark"
   hi def hlLevel0 ctermfg=red guifg=red1
   hi def hlLevel1 ctermfg=yellow guifg=orange1
