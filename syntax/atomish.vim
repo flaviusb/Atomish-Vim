@@ -30,7 +30,6 @@ syn match SquareError display "]"
 syn match CurlyError2 display "}" contained
 syn match SquareError2 display "]" contained
 syn region stringSplice matchgroup=StringSpliceRegion start=/#{/ skip="|..\{-}|" end=/}/ contains=@ListCluster,ParenError2,CurlyError2,SquareError2,Paren0,Curly0,Square0 contained
-syn match StringText display /./ contained
 
 syn match ParenError display ")" 
 syn match ParenError2 display ")" contained
@@ -70,9 +69,11 @@ syn region Square9 matchgroup=hlLevel9 start="\%(\%(`\|'\|''\)\%([a-zA-Z0-9_:]*\
 
 
 syn region hashBang start=/^#!\// end=/$/
-syn region QuoteStringDelimeter start=/"/ skip=/\\"/ end=/"/ contains=@Spell,stringSplice,qStringEscape,StringText
-syn region SquareStringDelimeter start=/#\[/ skip=/\\]/ end=/]/ contains=@Spell,stringSplice,sStringEscape,StringText
+syn region QuoteStringDelimeter start=/"/ skip=/\\"/ end=/"/ contains=@Spell,stringSplice,qStringEscape,QuoteString
+syn region SquareStringDelimeter start=/#\[/ skip=/\\]/ end=/]/ contains=@Spell,stringSplice,sStringEscape,SquareString
 
+syn region QuoteString start=/"/ms=s+1 skip=/\\"/ end=/"/ms=e-1 contains=@Spell,stringSplice,qStringEscape contained
+syn region SquareString start=/#\[/ms=s+2 skip=/\\]/ end=/]/ms=e-1 contains=@Spell,stringSplice,sStringEscape contained
 "syn region QuoteString start=/"/ms=s+1 skip=/\\"/ end=/"/ms=e-1 contains=@Spell,stringSplice,qStringEscape
 "syn region SquareString start=/#\[/ms=s+2 skip=/\\]/ end=/]/ms=e-1 contains=@Spell,stringSplice,sStringEscape
 
