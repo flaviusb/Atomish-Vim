@@ -126,7 +126,8 @@ hi def link CurlyError Error
 hi def link SquareError Error
 hi def link CurlyError2 Error
 hi def link SquareError2 Error
-hi def link StringText String
+hi def link QuoteString String
+hi def link SquareString String
 hi def link QuoteStringDelimeter StringDelimeter
 hi def link SquareStringDelimeter StringDelimeter
 hi def link hashBang Comment
