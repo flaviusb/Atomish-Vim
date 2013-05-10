@@ -72,8 +72,8 @@ syn region hashBang start=/^#!\// end=/$/
 syn region QuoteStringDelimeter start=/"/ skip=/\\"/ end=/"/ contains=@Spell,stringSplice,qStringEscape,QuoteString
 syn region SquareStringDelimeter start=/#\[/ skip=/\\]/ end=/]/ contains=@Spell,stringSplice,sStringEscape,SquareString
 
-syn region QuoteString start=/"/ms=s+1 skip=/\\"/ end=/"/ms=e-1 contains=@Spell,stringSplice,qStringEscape contained
-syn region SquareString start=/#\[/ms=s+2 skip=/\\]/ end=/]/ms=e-1 contains=@Spell,stringSplice,sStringEscape contained
+syn region QuoteString start=/./ skip=/\\"/ end=/"/me=e-1 contains=@Spell,stringSplice,qStringEscape contained
+syn region SquareString start=/./ skip=/\\]/ end=/]/me=e-1 contains=@Spell,stringSplice,sStringEscape contained
 "syn region QuoteString start=/"/ms=s+1 skip=/\\"/ end=/"/ms=e-1 contains=@Spell,stringSplice,qStringEscape
 "syn region SquareString start=/#\[/ms=s+2 skip=/\\]/ end=/]/ms=e-1 contains=@Spell,stringSplice,sStringEscape
 
