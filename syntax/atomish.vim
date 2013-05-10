@@ -30,6 +30,7 @@ syn match SquareError display "]"
 syn match CurlyError2 display "}" contained
 syn match SquareError2 display "]" contained
 syn region stringSplice matchgroup=StringSpliceRegion start=/#{/ skip="|..\{-}|" end=/}/ contains=@ListCluster,ParenError2,CurlyError2,SquareError2,Paren0,Curly0,Square0 contained
+syn match StringText display /./ contained
 
 syn match ParenError display ")" 
 syn match ParenError2 display ")" contained
@@ -69,8 +70,14 @@ syn region Square9 matchgroup=hlLevel9 start="\%(\%(`\|'\|''\)\%([a-zA-Z0-9_:]*\
 
 
 syn region hashBang start=/^#!\// end=/$/
-syn region QuoteString start=/"/ skip=/\\"/ end=/"/ contains=@Spell,stringSplice,qStringEscape
-syn region SquareString start=/#\[/ skip=/\\]/ end=/]/ contains=@Spell,stringSplice,sStringEscape
+syn region QuoteStringDelimeter start=/"/ skip=/\\"/ end=/"/ contains=@Spell,stringSplice,qStringEscape,StringText
+syn region SquareStringDelimeter start=/#\[/ skip=/\\]/ end=/]/ contains=@Spell,stringSplice,sStringEscape,StringText
+
+"syn region QuoteString start=/"/ms=s+1 skip=/\\"/ end=/"/ms=e-1 contains=@Spell,stringSplice,qStringEscape
+"syn region SquareString start=/#\[/ms=s+2 skip=/\\]/ end=/]/ms=e-1 contains=@Spell,stringSplice,sStringEscape
+
+"syn match StringDelimeter display /"/
+"syn match StringDelimeter display /#\[/
 
 syn match qStringEscape display "\(\\b\|\\e\|\\t\|\\n\|\\f\|\\r\|\\\"\|\\\\\|\\#\|\\\Z\|\\u[0-9a-fA-F]{1,4}\|\\[0-3]?[0-7]?[0-7]\)" contained
 syn match sStringEscape display "\(\\b\|\\e\|\\t\|\\n\|\\f\|\\r\|\\]\|\\\\\|\\#\|\\\Z\|\\u[0-9a-fA-F]{1,4}\|\\[0-3]?[0-7]?[0-7]\)" contained
@@ -118,8 +125,9 @@ hi def link CurlyError Error
 hi def link SquareError Error
 hi def link CurlyError2 Error
 hi def link SquareError2 Error
-hi def link QuoteString String
-hi def link SquareString String
+hi def link StringText String
+hi def link QuoteStringDelimeter StringDelimeter
+hi def link SquareStringDelimeter StringDelimeter
 hi def link hashBang Comment
 hi def link Comment SemicolonComment
 hi def link QQ PreProc
