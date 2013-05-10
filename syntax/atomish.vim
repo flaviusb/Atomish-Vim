@@ -87,6 +87,19 @@ syn match LiteralStringKeyword display "[a-zA-Z0-9_!:?]\+:\([a-zA-Z0-9_!?]\)\@!"
 
 syn region Comment start=/;/ end=/$/ contains=@Spell
 
+" Keywords
+
+syn keyword AtomishCommonMessage  asText
+syn keyword AtomishCommonMessage  +
+syn keyword AtomishCommonMessage  -
+syn keyword AtomishCommonMessage  ×
+syn keyword AtomishCommonMessage  ÷
+syn keyword AtomishCommonToplevel say
+syn keyword AtomishCommonObject   true
+syn keyword AtomishCommonObject   false
+
+syn match Operator display "[~!@$%^&*_=\'`/?×÷+-]+"
+
 hi def link LiteralStringRegexSlash LiteralStringRegex
 hi def link LiteralStringRegexSquare LiteralStringRegex
 hi def link LiteralStringRegexEscapeSlash LiteralStringRegexEscape
