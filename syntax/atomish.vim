@@ -69,16 +69,8 @@ syn region Square9 matchgroup=hlLevel9 start="\%(\%(`\|'\|''\)\%([a-zA-Z0-9_:]*\
 
 
 syn region hashBang start=/^#!\// end=/$/
-syn region QuoteStringDelimeter start=/"/ skip=/\\"/ end=/"/ contains=@Spell,stringSplice,qStringEscape,QuoteString
-syn region SquareStringDelimeter start=/#\[/ skip=/\\]/ end=/]/ contains=@Spell,stringSplice,sStringEscape,SquareString
-
-syn region QuoteString start=/./ skip=/\\"/ end=/"/me=e-1 contains=@Spell,stringSplice,qStringEscape contained
-syn region SquareString start=/./ skip=/\\]/ end=/]/me=e-1 contains=@Spell,stringSplice,sStringEscape contained
-"syn region QuoteString start=/"/ms=s+1 skip=/\\"/ end=/"/ms=e-1 contains=@Spell,stringSplice,qStringEscape
-"syn region SquareString start=/#\[/ms=s+2 skip=/\\]/ end=/]/ms=e-1 contains=@Spell,stringSplice,sStringEscape
-
-"syn match StringDelimeter display /"/
-"syn match StringDelimeter display /#\[/
+syn region QuoteString matchgroup=StringDelimeter start=/"/ skip=/\\"/ matchgroup=StringDelimeter end=/"/ contains=@Spell,stringSplice,qStringEscape
+syn region SquareString matchgroup=StringDelimeter start=/#\[/ skip=/\\]/ matchgroup=StringDelimeter end=/]/ contains=@Spell,stringSplice,sStringEscape
 
 syn match qStringEscape display "\(\\b\|\\e\|\\t\|\\n\|\\f\|\\r\|\\\"\|\\\\\|\\#\|\\\Z\|\\u[0-9a-fA-F]{1,4}\|\\[0-3]?[0-7]?[0-7]\)" contained
 syn match sStringEscape display "\(\\b\|\\e\|\\t\|\\n\|\\f\|\\r\|\\]\|\\\\\|\\#\|\\\Z\|\\u[0-9a-fA-F]{1,4}\|\\[0-3]?[0-7]?[0-7]\)" contained
@@ -128,8 +120,6 @@ hi def link CurlyError2 Error
 hi def link SquareError2 Error
 hi def link QuoteString String
 hi def link SquareString String
-hi def link QuoteStringDelimeter StringDelimeter
-hi def link SquareStringDelimeter StringDelimeter
 hi def link hashBang Comment
 hi def link Comment SemicolonComment
 hi def link QQ PreProc
