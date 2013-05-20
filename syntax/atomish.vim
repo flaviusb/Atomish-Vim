@@ -130,6 +130,7 @@ hi def link LiteralStringKeyword LiteralStringOther
 
 hi def link qStringEscape LiteralStringEscape
 hi def link sStringEscape LiteralStringEscape
+hi def link RegexEscape LiteralStringEscape
 
 hi def link AtomishNumber Number
 
