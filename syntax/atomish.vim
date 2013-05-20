@@ -88,6 +88,9 @@ syn match LiteralStringKeyword display "[a-zA-Z0-9_!:?]\+:\([a-zA-Z0-9_!?]\)\@!"
 syn region Comment start=/#;/ end=/$/ contains=@Spell
 syn region Comment start=/#\./ end=/\./ contains=@Spell
 
+syn match RegexEscape display "\(\\n|\\r|\\/|\\\\\)" contained
+syn region Regex matchgroup=RegexDelimeter start="/" skip="\\/" matchgroup=RegexDelimeter end="/" contains=RegexEscape
+
 " Keywords
 
 syn keyword AtomishCommonMessage  asText
