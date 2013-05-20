@@ -89,7 +89,8 @@ syn region Comment start=/#;/ end=/$/ contains=@Spell
 syn region Comment start=/#\./ end=/\./ contains=@Spell
 
 syn match RegexEscape display "\(\\n|\\r|\\/|\\\\\)" contained
-syn region Regex matchgroup=RegexDelimeter start="/" skip="\\/" matchgroup=RegexDelimeter end="/" contains=RegexEscape
+syn match RegexFlags display "[a-zA-Z]*" contained
+syn region Regex matchgroup=RegexDelimeter start="/" skip="\\/" matchgroup=RegexDelimeter end="/" contains=RegexEscape nextgroup=RegexFlags
 
 " Keywords
 
