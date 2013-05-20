@@ -99,7 +99,23 @@ syn keyword AtomishCommonMessage  +
 syn keyword AtomishCommonMessage  -
 syn keyword AtomishCommonMessage  ×
 syn keyword AtomishCommonMessage  ÷
+syn keyword AtomishCommonMessage  ==
+syn keyword AtomishCommonMessage  !=
+syn keyword AtomishCommonMessage  <=>
+syn keyword AtomishCommonMessage  cell
+syn keyword AtomishCommonMessage  hasCell
+syn keyword AtomishCommonMessage  setCell
+syn keyword AtomishCommonMessage  at
+syn keyword AtomishCommonMessage  length
+syn keyword AtomishCommonMessage  activatable
+syn keyword AtomishCommonMessage  code
+syn keyword AtomishCommonMessage  with
 syn keyword AtomishCommonToplevel say
+syn keyword AtomishCommonToplevel print
+syn keyword AtomishCommonToplevel read
+syn keyword AtomishCommonToplevel eval
+syn keyword AtomishCommonToplevel System
+syn keyword AtomishCommonToplevel FileSystem
 syn keyword AtomishCommonObject   true
 syn keyword AtomishCommonObject   false
 
