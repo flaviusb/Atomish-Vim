@@ -75,10 +75,10 @@ syn region SquareString matchgroup=StringDelimeter start=/#\[/ skip=/\\]/ matchg
 syn match qStringEscape display "\(\\b\|\\e\|\\t\|\\n\|\\f\|\\r\|\\\"\|\\\\\|\\#\|\\\Z\|\\u[0-9a-fA-F]{1,4}\|\\[0-3]?[0-7]?[0-7]\)" contained
 syn match sStringEscape display "\(\\b\|\\e\|\\t\|\\n\|\\f\|\\r\|\\]\|\\\\\|\\#\|\\\Z\|\\u[0-9a-fA-F]{1,4}\|\\[0-3]?[0-7]?[0-7]\)" contained
 
-syn region LiteralStringRegexSlash start=/#\// skip=/\\\// end=/\// contains=LiteralStringRegexEscapeSlash
-syn match LiteralStringRegexEscapeSlash display "\(\\\\\|\\\/\)" contained
-syn region LiteralStringRegexSquare start=/#r\[/ skip=/\\\]/ end=/]/ contains=LiteralStringRegexEscapeSquare
-syn match LiteralStringRegexEscapeSquare display "\(\\\\\|\\]\)" contained
+"syn region LiteralStringRegexSlash start=/#\// skip=/\\\// end=/\// contains=LiteralStringRegexEscapeSlash
+"syn match LiteralStringRegexEscapeSlash display "\(\\\\\|\\\/\)" contained
+"syn region LiteralStringRegexSquare start=/#r\[/ skip=/\\\]/ end=/]/ contains=LiteralStringRegexEscapeSquare
+"syn match LiteralStringRegexEscapeSquare display "\(\\\\\|\\]\)" contained
 
 syn match AtomishNumber display "\(\<[-+]\=\d\+\.\d*\|\<\d\+\.\d*\|\<\d\+\|\<[-+]\d\+\)"
 
@@ -147,33 +147,10 @@ hi def link Comment SemicolonComment
 hi def link QQ PreProc
 
 hi def link LiteralStringEscape SpecialChar
+hi def link stringSplice StringSpliceRegion
 hi def link AtomishCommonMessage Statement
 hi def link AtomishCommonToplevel Identifier
 hi def link AtomishCommonObject Identifier
-
-if &bg == "dark"
-  hi def hlLevel0 ctermfg=red guifg=red1
-  hi def hlLevel1 ctermfg=yellow guifg=orange1
-  hi def hlLevel2 ctermfg=green guifg=yellow1
-  hi def hlLevel3 ctermfg=cyan guifg=greenyellow
-  hi def hlLevel4 ctermfg=magenta guifg=green1
-  hi def hlLevel5 ctermfg=red guifg=springgreen1
-  hi def hlLevel6 ctermfg=yellow guifg=cyan1
-  hi def hlLevel7 ctermfg=green guifg=slateblue1
-  hi def hlLevel8 ctermfg=cyan guifg=magenta1
-  hi def hlLevel9 ctermfg=magenta guifg=purple1
-else
-  hi def hlLevel0 ctermfg=red guifg=red3
-  hi def hlLevel1 ctermfg=darkyellow guifg=orangered3
-  hi def hlLevel2 ctermfg=darkgreen guifg=orange2
-  hi def hlLevel3 ctermfg=blue guifg=yellow3
-  hi def hlLevel4 ctermfg=darkmagenta guifg=olivedrab4
-  hi def hlLevel5 ctermfg=red guifg=green4
-  hi def hlLevel6 ctermfg=darkyellow guifg=paleturquoise3
-  hi def hlLevel7 ctermfg=darkgreen guifg=deepskyblue4
-  hi def hlLevel8 ctermfg=blue guifg=darkslateblue
-  hi def hlLevel9 ctermfg=darkmagenta guifg=darkviolet
-endif
 
 syn sync lines=300
 
