@@ -147,7 +147,6 @@ hi def link Comment SemicolonComment
 hi def link QQ PreProc
 
 hi def link LiteralStringEscape SpecialChar
-hi def link stringSplice StringSpliceRegion
 hi def link AtomishCommonMessage Statement
 hi def link AtomishCommonToplevel Identifier
 hi def link AtomishCommonObject Identifier
