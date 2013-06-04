@@ -116,6 +116,8 @@ syn keyword AtomishCommonMessage  at=
 syn keyword AtomishCommonMessage  length
 syn keyword AtomishCommonMessage  keys
 syn keyword AtomishCommonMessage  values
+syn keyword AtomishCommonMessage  map
+syn keyword AtomishCommonMessage  flatMap
 syn keyword AtomishCommonMessage  activatable
 syn keyword AtomishCommonMessage  code
 syn keyword AtomishCommonMessage  mimic
@@ -126,6 +128,8 @@ syn keyword AtomishCommonToplevel read
 syn keyword AtomishCommonToplevel eval
 syn keyword AtomishCommonToplevel System
 syn keyword AtomishCommonToplevel FileSystem
+syn keyword AtomishCommonToplevel Array
+syn keyword AtomishCommonToplevel Map
 syn keyword AtomishCommonObject   true
 syn keyword AtomishCommonObject   false
 syn keyword AtomishCommonObject   nil
