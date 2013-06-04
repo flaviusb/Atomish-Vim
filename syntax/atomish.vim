@@ -109,7 +109,7 @@ syn keyword AtomishCommonMessage  <
 syn keyword AtomishCommonMessage  >
 syn keyword AtomishCommonMessage  <=
 syn keyword AtomishCommonMessage  >=
-syn keyword AtomishCommonMessage  =~
+syn keyword AtomishCommonMessage  ~=
 syn keyword AtomishCommonMessage  cell
 syn keyword AtomishCommonMessage  hasCell
 syn keyword AtomishCommonMessage  setCell
