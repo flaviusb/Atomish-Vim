@@ -96,10 +96,12 @@ syn region Regex matchgroup=RegexDelimeter start="/" skip="\\/" matchgroup=Regex
 
 syn keyword AtomishCommonMessage  asText
 syn keyword AtomishCommonMessage  asBool
+syn keyword AtomishCommonMessage  asArray
 syn keyword AtomishCommonMessage  +
 syn keyword AtomishCommonMessage  -
 syn keyword AtomishCommonMessage  ×
 syn keyword AtomishCommonMessage  ÷
+syn keyword AtomishCommonMessage  =
 syn keyword AtomishCommonMessage  ==
 syn keyword AtomishCommonMessage  !=
 syn keyword AtomishCommonMessage  <=>
@@ -123,11 +125,14 @@ syn keyword AtomishCommonMessage  code
 syn keyword AtomishCommonMessage  mimic
 syn keyword AtomishCommonMessage  with
 syn keyword AtomishCommonToplevel say
+syn keyword AtomishCommonToplevel if
+syn keyword AtomishCommonToplevel let
 syn keyword AtomishCommonToplevel print
 syn keyword AtomishCommonToplevel read
 syn keyword AtomishCommonToplevel eval
 syn keyword AtomishCommonToplevel System
 syn keyword AtomishCommonToplevel FileSystem
+syn keyword AtomishCommonToplevel Origin
 syn keyword AtomishCommonToplevel Array
 syn keyword AtomishCommonToplevel Map
 syn keyword AtomishCommonObject   true
