@@ -127,6 +127,10 @@ syn keyword AtomishCommonMessage  with
 syn keyword AtomishCommonToplevel say
 syn keyword AtomishCommonToplevel if
 syn keyword AtomishCommonToplevel let
+syn keyword AtomishCommonToplevel case
+syn keyword AtomishCommonToplevel cond
+syn keyword AtomishCommonToplevel fn
+syn keyword AtomishCommonToplevel macro
 syn keyword AtomishCommonToplevel print
 syn keyword AtomishCommonToplevel read
 syn keyword AtomishCommonToplevel eval
