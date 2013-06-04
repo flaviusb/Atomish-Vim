@@ -95,6 +95,7 @@ syn region Regex matchgroup=RegexDelimeter start="/" skip="\\/" matchgroup=Regex
 " Keywords
 
 syn keyword AtomishCommonMessage  asText
+syn keyword AtomishCommonMessage  asBool
 syn keyword AtomishCommonMessage  +
 syn keyword AtomishCommonMessage  -
 syn keyword AtomishCommonMessage  ×
@@ -102,13 +103,22 @@ syn keyword AtomishCommonMessage  ÷
 syn keyword AtomishCommonMessage  ==
 syn keyword AtomishCommonMessage  !=
 syn keyword AtomishCommonMessage  <=>
+syn keyword AtomishCommonMessage  <
+syn keyword AtomishCommonMessage  >
+syn keyword AtomishCommonMessage  <=
+syn keyword AtomishCommonMessage  >=
+syn keyword AtomishCommonMessage  =~
 syn keyword AtomishCommonMessage  cell
 syn keyword AtomishCommonMessage  hasCell
 syn keyword AtomishCommonMessage  setCell
 syn keyword AtomishCommonMessage  at
+syn keyword AtomishCommonMessage  at=
 syn keyword AtomishCommonMessage  length
+syn keyword AtomishCommonMessage  keys
+syn keyword AtomishCommonMessage  values
 syn keyword AtomishCommonMessage  activatable
 syn keyword AtomishCommonMessage  code
+syn keyword AtomishCommonMessage  mimic
 syn keyword AtomishCommonMessage  with
 syn keyword AtomishCommonToplevel say
 syn keyword AtomishCommonToplevel print
@@ -118,6 +128,7 @@ syn keyword AtomishCommonToplevel System
 syn keyword AtomishCommonToplevel FileSystem
 syn keyword AtomishCommonObject   true
 syn keyword AtomishCommonObject   false
+syn keyword AtomishCommonObject   nil
 
 syn match Operator display "[~!@$%^&*_=\'`/?×÷+-]+"
 
