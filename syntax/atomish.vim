@@ -84,6 +84,7 @@ syn match AtomishNumber display "\(\<[-+]\=\d\+\.\d*\|\<\d\+\.\d*\|\<\d\+\|\<[-+
 
 syn match LiteralStringSymbol display "\([a-zA-Z0-9_!?]\)\@<!:[a-zA-Z0-9_!:?]\+"
 syn match LiteralStringKeyword display "[a-zA-Z0-9_!:?]\+:\([a-zA-Z0-9_!?]\)\@!"
+syn match FlagSelector display "#[a-zA-Z][a-zA-Z0-9_!:?]\*\([a-zA-Z0-9_!?]\)\@!"
 
 syn region Comment start=/#;/ start=/؟/ end=/$/ contains=@Spell
 syn region Comment start=/#\./ end=/\./ contains=@Spell
