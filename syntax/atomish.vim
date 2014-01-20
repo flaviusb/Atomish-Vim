@@ -82,7 +82,7 @@ syn match sStringEscape display "\(\\b\|\\e\|\\t\|\\n\|\\f\|\\r\|\\]\|\\\\\|\\#\
 
 syn match AtomishNumber display "\(\<0x[0-9a-fA-F]\+\|\<[-+]\=\d\+\.\d*\|\<\d\+\.\d*\|\<\d\+\|\<[-+]\d\+\)"
 
-syn match LiteralStringSymbol display "\([a-zA-Z0-9_!?]\)\@<!:\(\([_+]+[_+:]*\)?[a-zA-Z][a-zA-Z0-9_:$!?%=<>-]*\|[~!@$%^&*_=\'`/?×÷≠→←⇒⇐⧺⧻§∘≢∨∪∩□∀⊃∈+<>-]\+\|\[\]\|{}\|…\)"
+syn match LiteralStringSymbol display "\([a-zA-Z0-9_!?]\)\@<!:\(\([_+]\+[_+:]*\)\?[a-zA-Z][a-zA-Z0-9_:$!?%=<>-]*\|[~!@$%^&*_=\'`/?×÷≠→←⇒⇐⧺⧻§∘≢∨∪∩□∀⊃∈+<>-]\+\|\[\]\|{}\|…\)"
 syn match LiteralStringKeyword display "[a-zA-Z0-9_!:?]\+:\([a-zA-Z0-9_!?]\)\@!"
 syn match FlagSelector display "#[a-zA-Z][a-zA-Z0-9_!:?]*\([a-zA-Z0-9_!?]\)\@!"
 
