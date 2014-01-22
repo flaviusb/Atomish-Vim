@@ -75,6 +75,10 @@ syn region SquareString matchgroup=StringDelimeter start=/#\[/ skip=/\\]/ matchg
 syn match qStringEscape display "\(\\b\|\\e\|\\t\|\\n\|\\f\|\\r\|\\\"\|\\\\\|\\#\|\\\Z\|\\u[0-9a-fA-F]{1,4}\|\\[0-3]?[0-7]?[0-7]\)" contained
 syn match sStringEscape display "\(\\b\|\\e\|\\t\|\\n\|\\f\|\\r\|\\]\|\\\\\|\\#\|\\\Z\|\\u[0-9a-fA-F]{1,4}\|\\[0-3]?[0-7]?[0-7]\)" contained
 
+syn region pct_w matchgroup=StringDelimeter start=/%w{/ skip=/ / matchgroup=StringDelimeter end=/}/ contains=@Spell,contiguousword
+
+syn match contiguousword display /[^ \n\r\t}]\+/ contained
+
 "syn region LiteralStringRegexSlash start=/#\// skip=/\\\// end=/\// contains=LiteralStringRegexEscapeSlash
 "syn match LiteralStringRegexEscapeSlash display "\(\\\\\|\\\/\)" contained
 "syn region LiteralStringRegexSquare start=/#r\[/ skip=/\\\]/ end=/]/ contains=LiteralStringRegexEscapeSquare
@@ -167,6 +171,7 @@ hi def link CurlyError2 Error
 hi def link SquareError2 Error
 hi def link QuoteString String
 hi def link SquareString String
+hi def link contiguousword String
 hi def link hashBang Comment
 hi def link Comment SemicolonComment
 hi def link QQ PreProc
