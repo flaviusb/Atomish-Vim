@@ -126,6 +126,7 @@ syn keyword AtomishCommonMessage  values
 syn keyword AtomishCommonMessage  map
 syn keyword AtomishCommonMessage  flatMap
 syn keyword AtomishCommonMessage  activatable
+syn keyword AtomishCommonMessage  documentation
 syn keyword AtomishCommonMessage  code
 syn keyword AtomishCommonMessage  mimic
 syn keyword AtomishCommonMessage  with
@@ -135,6 +136,7 @@ syn keyword AtomishCommonToplevel let
 syn keyword AtomishCommonToplevel case
 syn keyword AtomishCommonToplevel cond
 syn keyword AtomishCommonToplevel fn
+syn keyword AtomishCommonToplevel fnx
 syn keyword AtomishCommonToplevel macro
 syn keyword AtomishCommonToplevel print
 syn keyword AtomishCommonToplevel read
